@@ -2,7 +2,7 @@
 
 # COMP30019 – Graphics and Interaction
 
-## Workshop 2
+## Workshop 2: Polygonal Geometry
 
 <p align="center">
   <a href="https://comp30019.github.io/Workshop-2-Solution/" alt="Play Online">
@@ -10,7 +10,7 @@
   </a>
 </p>
 
-## Introduction
+### Introduction
 
 In this workshop you will learn about polygonal geometry, and the internal data structures that 
 represent the _shape_ of three-dimensional objects, often known as *meshes*. To begin, clone this repository and open
