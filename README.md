@@ -4,7 +4,13 @@
 
 ## Workshop 2
 
-# Introduction:
+<p align="center">
+  <a href="https://comp30019.github.io/Workshop-2-Solution/" alt="Play Online">
+    <img src="https://img.shields.io/static/v1?label=Play%20Solution&message=comp30019.github.io/Workshop-2-Solution/&color=blue&logo=unity" />
+  </a>
+</p>
+
+## Introduction
 
 In this workshop you will learn about polygonal geometry, and the internal data structures that 
 represent the _shape_ of three-dimensional objects, often known as *meshes*. To begin, clone this repository and open
@@ -16,7 +22,7 @@ You'll be working with the following assets today:
 "game" starts.
 * **VertexColorShader.shader** - A Cg/HLSL shader used to render the cube using simple 
 vertex colours. Don't worry about understanding this file in detail today -- you'll learn more about
-shaders in future weeks.
+shaders later in the semester.
 * **VertexColorMaterial.mat** - A material asset that utilises the above shader
 to draw the cube's surface.
 
