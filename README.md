@@ -41,7 +41,7 @@ Use the ‘scene gizmo’ located in the top-right of the viewport in
 order to select different angles to view the cube from. Which two faces are
 missing?
 
-> **Note** <br>
+> **Note**<br>
 > You might notice this cube is not visible except during play mode. This is because 
 > the cube mesh is 
 > *generated* upon starting the scene. This is done inside the `GenerateCube.cs` component,
@@ -75,7 +75,7 @@ unique [colour](https://docs.unity3d.com/ScriptReference/Color.html)
 of your choosing. This will be very similar logically to the cube generator script, so you are 
 welcome to use it as a template. 
 
-> **Note** <br>
+> **Note**<br>
 > Writing the new component alone is not sufficient to render the pyramid. You also need to
 > attach it to a new game object with two other built-in components:
 > * A [Mesh Filter](https://docs.unity3d.com/Manual/class-MeshFilter.html)
@@ -147,7 +147,7 @@ formats, many of which can be directly imported by the Unity engine as pre-fabri
 This means writing code to define the shape 
 of an object is not necessary at all! 
 
-> **Note** <br> 
+> **Note**<br> 
 > A model may be more complex than just a mesh.
 > Ultimately, meshes alone cannot capture the complexity of some objects -- for example, how
 > they might be animated, or some of the surface properties (e.g. materials).
@@ -158,7 +158,7 @@ to [import them](https://docs.unity3d.com/Manual/ImportingModelFiles.html) into
 your Unity project. Models with the _.fbx_ format are generally well handled
 by Unity, but there are other formats work well too. 
 
-> **Warning** <br>
+> **Warning**<br>
 > Always keep in mind
 > copyright and licensing when including external resources in your projects –
 > there are many freebies out there, but licenses may prohibit usage
