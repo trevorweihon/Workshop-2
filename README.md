@@ -5,12 +5,16 @@
 ## Workshop 2: Polygonal Geometry
 
 <p align="center">
+  <img src="Gifs/preview.gif">
+</p>
+
+<p align="center">
   <a href="https://comp30019.github.io/Workshop-2-Solution/" alt="Play Online">
     <img src="https://img.shields.io/static/v1?label=Play%20Solution&message=comp30019.github.io/Workshop-2-Solution/&color=blue&logo=unity" />
   </a>
 </p>
 
-### Introduction
+### Overview
 
 In this workshop you will learn about polygonal geometry, and the internal data structures that 
 represent the _shape_ of three-dimensional objects, often known as *meshes*. To begin, clone this repository and open
@@ -32,7 +36,7 @@ to draw the cube's surface.
 
 Open `MainScene.unity` in the editor. Press the ‘Play’ button and you should see a
 *partially* rendered cube. Switch to the ‘Scene’ tab so you can manually 
-[navigate the scene](https://docs.unity3d.com/2022.2/Documentation/Manual/SceneViewNavigation.html).
+[navigate the scene](https://docs.unity3d.com/Manual/SceneViewNavigation.html).
 Use the ‘scene gizmo’ located in the top-right of the viewport in
 order to select different angles to view the cube from. Which two faces are
 missing?
