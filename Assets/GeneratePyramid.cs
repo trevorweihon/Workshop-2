@@ -8,7 +8,7 @@ using UnityEngine;
 // MeshFilter component on the same game object. If it doesn't exist, the Unity
 // engine will create one automatically.
 [RequireComponent(typeof(MeshFilter))]
-public class GenerateCube : MonoBehaviour
+public class GeneratePyramid : MonoBehaviour
 {
     private void Start()
     {
@@ -16,7 +16,7 @@ public class GenerateCube : MonoBehaviour
         // same way that we got the MeshRenderer component last week.
         var meshFilter = GetComponent<MeshFilter>();
         
-        // Now we can create a cube mesh and assign it to the mesh filter.
+        // Now we can create a pyramid mesh and assign it to the mesh filter.
         meshFilter.mesh = CreateMesh();
     }
 
@@ -27,7 +27,7 @@ public class GenerateCube : MonoBehaviour
         // - https://docs.unity3d.com/ScriptReference/Mesh.html
         var mesh = new Mesh
         {
-            name = "Cube"
+            name = "Pyramid"
         };
 
         // Step 1: Define the vertices. These are "points" in 3D space that
@@ -40,60 +40,34 @@ public class GenerateCube : MonoBehaviour
         // the 1st point must be the same for each face
         mesh.SetVertices(new[]
         {
-            // Top face
-            new Vector3(-1.0f, 1.0f, -1.0f),
-            new Vector3(-1.0f, 1.0f, 1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
-            
-            new Vector3(-1.0f, 1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
-            new Vector3(1.0f, 1.0f, -1.0f),
-
-            // Bottom face
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, -1.0f, 1.0f),
-            new Vector3(-1.0f, -1.0f, 1.0f),
-            
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, -1.0f, 1.0f),
-
-            // Left face
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(-1.0f, -1.0f, 1.0f),
-            new Vector3(-1.0f, 1.0f, 1.0f),
-            
-            new Vector3(-1.0f, -1.0f, -1.0f),
-            new Vector3(-1.0f, 1.0f, 1.0f),
-            new Vector3(-1.0f, 1.0f, -1.0f),
-
-            // Right face
-            new Vector3(1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
-            new Vector3(1.0f, -1.0f, 1.0f),
-            
-            new Vector3(1.0f, -1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f),
-
-            // Define more vertices here!
             // Front face
-            new Vector3(1f,1f,-1f),            
-            new Vector3(-1f,-1f,-1f),
-            new Vector3(-1f,1f,-1f),
-
-            new Vector3(1f,1f,-1f),
+            new Vector3(0f, 1f, 0f),
             new Vector3(1f,-1f,-1f),
             new Vector3(-1f,-1f,-1f),
-            
-            // Back face
-            new Vector3(-1f,1f,1f),
-            new Vector3(1f,-1f,1f),
-            new Vector3(1f,1f,1f),
 
-            new Vector3(-1f,1f,1f),
+            // left face
+            new Vector3(0f, 1f, 0f),
+            new Vector3(-1f,-1f,-1f),
             new Vector3(-1f,-1f,1f),
-            new Vector3(1f,-1f,1f)
+
+            // right face
+            new Vector3(0f, 1f, 0f),
+            new Vector3(1f,-1f,1f),
+            new Vector3(1f,-1f,-1f),
+
+            // back face
+            new Vector3(0f,1f,0f),
+            new Vector3(-1f,-1f,1f),
+            new Vector3(1f,-1f,1f),
+
+            // bottom face
+            new Vector3(1f,-1f,1f),
+            new Vector3(-1f,-1f,-1f),
+            new Vector3(-1f,-1f,1f),
+
+            new Vector3(1f,-1f,1f),
+            new Vector3(1f,-1f,-1f),
+            new Vector3(-1f,-1f,-1f)
 
         });
 
@@ -102,61 +76,35 @@ public class GenerateCube : MonoBehaviour
         // so the length of both arrays must be the same.
         mesh.SetColors(new[]
         {
-            // Top face
-            Color.red,
-            Color.red,
-            Color.red,
-            
-            Color.red,
-            Color.red,
-            Color.red,
-
-            // Bottom face
-            Color.red,
-            Color.red,
-            Color.red,
-            
-            Color.red,
-            Color.red,
-            Color.red,
+            // Front face
+            Color.cyan,
+            Color.cyan,
+            Color.cyan,
 
             // Left face
-            Color.yellow, 
-            Color.yellow,
-            Color.yellow,
+            Color.white,
+            Color.white,
+            Color.white,
+
+            // right face
+            Color.magenta,
+            Color.magenta,
+            Color.magenta,
+
+            // back face
+            Color.grey,
+            Color.grey,
+            Color.grey,
+
+            // bottom face
+            Color.red,
+            Color.red,
+            Color.red,
+
+            Color.red,
+            Color.red,
+            Color.red,
             
-            Color.yellow,
-            Color.yellow,
-            Color.yellow,
-
-            // Right face
-            Color.yellow, 
-            Color.yellow,
-            Color.yellow,
-            
-            Color.yellow,
-            Color.yellow,
-            Color.yellow,
-
-            // Define more colours here!
-
-            // Front face
-            Color.blue,
-            Color.blue,
-            Color.blue,
-
-            Color.blue,
-            Color.blue,
-            Color.blue,
-
-            // Back face
-            Color.blue,
-            Color.blue,
-            Color.blue,
-
-            Color.blue,
-            Color.blue,
-            Color.blue
         });
 
         // Step 3: Define the indices. The indices "connect" vertices together
@@ -169,9 +117,7 @@ public class GenerateCube : MonoBehaviour
         // Luckily for us this is easy to automate because we already ordered
         // the above vertex and colour arrays just like this! We only need to
         // generate a range of integers from 0 to the # of vertices - 1:
-        // var indices = Enumerable.Range(0, mesh.vertices.Length).ToArray();
         var indices = Enumerable.Range(0, mesh.vertices.Length).ToArray();
-        
         mesh.SetIndices(indices, MeshTopology.Triangles, 0);
         
         // Note that the topology argument specifies that we are in fact
